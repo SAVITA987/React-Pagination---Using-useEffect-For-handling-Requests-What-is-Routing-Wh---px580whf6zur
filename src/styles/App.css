@@ -1,3 +1,78 @@
-.active-btn{
-    background-color: red;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding: 1rem;
+    width: 100vw;
+    background-color: #666;
+    display: grid;
+    place-content: center;
+    overflow-x: hidden;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loader{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;;
+    border-left: 2px solid transparent;
+    animation: loader 1s infinite linear;
+}
+
+.post-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 250px;
+    width: 250px;
+    border-radius: .2rem;
+    background-color: #eee;
+    padding: 1rem;
+}
+
+.pagination-buttons-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .2rem;
+    margin-bottom: 1rem;
+}
+.pagination-buttons-list button{
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #ccc;
+    color: #111;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: .1rem;
+}
+button.active-btn{
+    background-color: #444;
+    border: 2px solid #ccc;
+    color: #ccc;
+}
+
+@keyframes loader {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
 }
