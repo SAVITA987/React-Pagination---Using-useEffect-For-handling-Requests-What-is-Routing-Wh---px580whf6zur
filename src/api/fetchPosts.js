@@ -1,5 +1,4 @@
 const fetchPosts = async (page, limit) => {
-    // optionally write fetching logic here or somewhere else
     const API_URL = `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`;
     try{
         const response = await fetch(API_URL);
@@ -11,5 +10,4 @@ const fetchPosts = async (page, limit) => {
     }
 }
 
-
-export { fetchPosts }
+export default fetchPosts;
