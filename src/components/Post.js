@@ -1,11 +1,11 @@
-import React from 'react'
-const Post = ({body, title}) => {
-    return (
-        <div className="post">
-            <h3 className='title'>{title}</h3>
-            <p className='body'>{body}</p>
-        </div>
-    )
-}
+import React from "react";
+const Post = ({ ele }) => {
+  return (
+    <div className="post">
+      <h3>{ele.title}</h3>
+      <p>{ele.body}</p>
+    </div>
+  );
+};
 
-export default Post
+export { Post };
